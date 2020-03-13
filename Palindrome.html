@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome of a number</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+    h3{
+        font-weight: bold;
+        font-family: sans-serif;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <h3>Check a number is palindrome or not</h3>
+<div class="container">
+    <div class="row">
+        <div class="col col-sm-2"></div>
+        <div class="col col-12 col-sm-8">
+            <form>
+                <table class=" table table-borderless">
+                    <tr>
+                        <td>Enter a number:</td>
+                        <td><input type="text" class="form-control" id="pn1"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="button" class="btn btn-success" onClick="palindromeOfNumber();">SUBMIT</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="col col-sm-2"></div>
+    </div>
+</div>
+<script>
+    function palindromeOfNumber()
+    {
+        var num=parseInt(document.getElementById("pn1").value);
+        var rev=0;
+        var temp=num;
+        while(temp>0)
+        {
+            rev=rev*10+temp%10;
+            temp=parseInt(temp/10);
+        }
+        if(rev==num)
+        {
+            console.log("The number " +num+ " is a palindrome number.");
+        }
+        else{
+            console.log("The number " +num+ " is not a palindrome number.");
+        }
+    }
+</script>
+</body>
+</html>
