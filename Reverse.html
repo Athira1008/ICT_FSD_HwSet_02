@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse of a Number</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style type="text/css">
+h4{
+color:black;
+font-family: sans-serif;
+text-align: center;
+}
+</style>
+</head>
+<body>
+    <h4>Reverse of a Number</h4>
+<div class="container">
+    <div class="row">
+        <div class="col col-sm-3"></div>
+        <div class="col col-12 col-sm-6">
+            <form>
+                <table class="table table-borderless">
+                    <tr>
+                        <td>Enter Number</td>
+                        <td><input type="text" class="form-control" id="rn1"></td>
+                        <tr>
+                            <td></td>
+                            <td><button type="button" class="btn btn-info" onclick="reverseOfNumber();">SUBMIT</button></td>
+                        </tr>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="col col-sm-3"></div>
+    </div>
+</div>
+<script>
+    function reverseOfNumber(){
+        var num=parseInt(document.getElementById("rn1").value);
+        var rev=0;
+        var temp=num;
+        while(temp>0){
+            rev=rev*10+temp%10;
+            temp=parseInt(temp/10);
+        }
+        
+        console.log("Reverse of number " +num+ " is" +rev);
+    }
+</script>
+</body>
+</html>
